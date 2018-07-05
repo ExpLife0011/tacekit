@@ -1,4 +1,3 @@
 # tacekit
-
-This is a ring 3 rookit I decided to make for educational purposes.
-Please do not use this for any other purpose.
+A ring 3 rookit I decided to make for educational purposes.
+It's purpose is to manage plugins and stay hidden.
