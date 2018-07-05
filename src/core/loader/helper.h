@@ -1,6 +1,6 @@
 /**
  * module.h
- * Just some module related helper functions.
+ * Just some path related helper functions.
  *
  * © 2018 fereh
  */

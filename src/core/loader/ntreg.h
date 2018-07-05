@@ -1,3 +1,12 @@
+/**
+ * ntreg.h
+ * Registry manipulation using the NTAPI for more control.
+ *
+ * © 2018 fereh
+ */
+
+// TODO: rewrite this library, needs more control
+
 #pragma once
 
 #include <Windows.h>

@@ -20,7 +20,6 @@ const enum { LOG_DEBUG, LOG_INFO, LOG_WARNING, LOG_ERROR, LOG_FATAL };
 BOOL CreateLog(PCWSTR filePath);
 BOOL SetLog(PCWSTR filePath);
 BOOL WriteLog(UINT level, PCWSTR format, ...);
-//BOOL FlushLog();
 void CloseLog(void);
 
 #define OpenLog CreateLog

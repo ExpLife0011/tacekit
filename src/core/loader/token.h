@@ -1,3 +1,10 @@
+/**
+ * token.h
+ * Token helper functions.
+ *
+ * © 2018 fereh
+ */
+
 #pragma once
 
 #include <Windows.h>

@@ -1,6 +1,4 @@
 /**
- * `][` //-\ << ]E ][< ]][ `][`
- * 
  * main.c
  * Loads and manages plugins.
  * This library is injected by the Injector and executed by a remote process.

@@ -1,6 +1,5 @@
 /**
  * log.c
- * Provides event logging functions.
  *
  * © 2018 fereh
  */
@@ -23,11 +22,9 @@ static BOOL FlushLog();
 
 BOOL CreateLog(PCWSTR filePath)
 {
-	if (gFileBuffer != NULL)
-	{
-		return FALSE;
-	}
+	if (gFileBuffer) return FALSE;
 
+	// logs are buffered until a log path is set
 	gFileBuffer = HeapAlloc(
 		GetProcessHeap(),
 		HEAP_ZERO_MEMORY,
@@ -119,7 +116,7 @@ BOOL WriteLog(UINT level, PCWSTR format, ...)
 
 	va_list args;
 
-	WCHAR message[1024];
+	WCHAR message[1024]; // TODO: dynamic allocation?
 
 	DWORD currentSize = (DWORD)strlen(gFileBuffer); // terminator not included
 	DWORD remainingSize = gFileBufferSize - currentSize;
@@ -145,7 +142,7 @@ BOOL WriteLog(UINT level, PCWSTR format, ...)
 		{ // then extend buffer
 			gFileBufferSize = currentSize + requiredSize;
 
-			HeapReAlloc(
+			gFileBuffer = HeapReAlloc(
 				GetProcessHeap(),
 				HEAP_ZERO_MEMORY,
 				gFileBuffer,
@@ -185,7 +182,6 @@ BOOL FlushLog()
 		return FALSE;
 	}
 
-	//FlushFileBuffers(gFileHandle);
 	return TRUE;
 }
 

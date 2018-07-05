@@ -1,3 +1,5 @@
+; See override.h
+; © 2018 fereh
 
 IFDEF rax
 ELSE
@@ -26,11 +28,6 @@ IFDEF rax
 		mov QWORD PTR [rdx], rcx
 		ret
 	OverrideReturn ENDP
-
-	_OverrideReturn PROC
-		mov rax, [gRetValue]
-		jmp [gRetAddr]
-	_OverrideReturn ENDP
 ELSE
 	OverrideReturn PROC
 		push ebp
@@ -45,12 +42,12 @@ ELSE
 		pop ebp
 		ret
 	OverrideReturn ENDP
+ENDIF
 
 	_OverrideReturn PROC
 		mov eax, [gRetValue]
 		jmp [gRetAddr]
 	_OverrideReturn ENDP
-ENDIF
 
 PUBLIC OverrideReturn
 END

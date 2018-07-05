@@ -1,10 +1,10 @@
 /**
-* winrtPlugin.h
-* Plugin definitions for winrt plugins.
-* Inlcude this file in your plugin source code.
-*
-* © 2018 fereh
-*/
+ * tacePlugin.h
+ * Plugin definitions for tacekit plugins.
+ * Inlcude this file in your plugin source code.
+ *
+ * © 2018 fereh
+ */
 
 #pragma once
 
@@ -21,4 +21,4 @@ typedef struct Plugin
 	HKEY keyHandle;
 } Plugin;
 
-DWORD CALLBACK PluginMain(PVOID); // Plugin* passed
+DWORD CALLBACK PluginMain(PVOID pluginPtr);

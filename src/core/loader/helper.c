@@ -1,6 +1,5 @@
 /**
  * helper.c
- * Just some popular helper functions.
  *
  * © 2018 fereh
  */
