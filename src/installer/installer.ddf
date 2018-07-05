@@ -1,0 +1,10 @@
+.OPTION EXPLICIT						; generate errors 
+.Set CabinetNameTemplate=installer.cab       
+.set DiskDirectoryTemplate=CDROM		; all cabinets in a single directory
+.Set CompressionType=MSZIP
+.Set UniqueFiles="OFF"
+.Set Cabinet=on
+.Set DiskDirectory1=INSTALLER.CAB
+
+injector.dll
+loader.dll
