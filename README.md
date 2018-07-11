@@ -1,3 +1,4 @@
 # tacekit
-A ring 3 rookit I decided to make for educational purposes.
-It's purpose is to manage plugins and stay hidden.
+A ring user mode rootkit I decided to make for educational purposes.
+
+*Note: This project is still in developement. I will add more to this file once I have a sufficient amount of the software completed.*
